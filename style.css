@@ -1,0 +1,136 @@
+:root{
+    --azul: #254d79;
+    --azulOscuro: #0B2545;
+    --aculGris: #8DA9C4;
+    --blanco: #ffff;
+    --fuente:sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente);
+    background-color: #ffff;
+    display: flex;
+    align-items: center ;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+    height: auto;
+    border: 0px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.5);
+    outline: 1px solid transparent;
+}
+
+.imagen-formu{
+    background-image: url(iniciarsesion.png);
+    background-position: center;
+    background-size: cover;
+    flex: 0 0 calc(60%);
+    height: 200px;
+    position: relative;
+}
+
+.imagen-formu::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(141,169,196,.5), rgba(19,64,116,.5));
+}
+@media(min-width:768px) {
+    .imagen-formu{
+        height: auto;
+    }
+}
+
+@media(min-width:768px){
+    .contenedor-formu{
+        display: flex;
+        background-position: right;
+    } 
+}
+
+@media(min-width:1200px){
+    .imagen-formu{
+        display: flex;
+        background-position: center ;
+    } 
+}
+
+.formulario{
+    padding: 50px;
+    background-color: var(--azul);   
+}
+
+.texto-formulario h2, .input label, .contrasenaperdida a, .texto-formulario p{
+    color: var(--blanco);
+}
+
+.texto-formulario h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+
+.input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.contrasenaperdida a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.textos{
+    text-decoration: none;
+    color: #ffff;
+}
+.input button{
+    width: 50%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+    
+}
+
+.input button{
+    background-color:#0079ff;
+    color: var(--blanco);
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    transition: background-color .3s ease-in-out;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.input button:hover{
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
